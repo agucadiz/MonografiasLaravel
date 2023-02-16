@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('articulos', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->year('anyo');
+            $table->smallInteger('num_paginas');
             $table->timestamps();
         });
     }

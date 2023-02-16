@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('articulos_autores', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('articulo_id')->constrained('articulos');
+            $table->foreignId('autor_id')->constrained('autors');
             $table->timestamps();
         });
     }

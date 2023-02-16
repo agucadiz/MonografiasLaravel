@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('monografias', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->year('anyo');
             $table->timestamps();
         });
     }
