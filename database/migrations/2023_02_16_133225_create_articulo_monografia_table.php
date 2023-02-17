@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('articulos_autores', function (Blueprint $table) {
+        Schema::create('articulo_monografia', function (Blueprint $table) {
             $table->id();
             $table->foreignId('articulo_id')->constrained('articulos');
-            $table->foreignId('autor_id')->constrained('autores');
+            $table->foreignId('monografia_id')->constrained('monografias');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articulos_autores');
+        Schema::dropIfExists('articulo_monografia');
     }
 };
