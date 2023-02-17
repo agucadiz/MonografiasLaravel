@@ -15,7 +15,9 @@ class MonografiaController extends Controller
      */
     public function index()
     {
-        //
+        $monografias = Monografia::all();
+
+        return view('monografias.index', compact('monografias'));
     }
 
     /**

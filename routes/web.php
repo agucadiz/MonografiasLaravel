@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MonografiaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,5 +27,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//CRUD
+Route::resource('monografias', MonografiaController::class)->names('monografias');
 
 require __DIR__.'/auth.php';
