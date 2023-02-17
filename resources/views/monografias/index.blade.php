@@ -63,7 +63,7 @@
                                                 Editar
                                             </button>
                                         </form>
-                                        <form action="{{-- {{ route('monografias.destroy', $monografia) }} --}}" method="POST">
+                                        <form action="{{ route('monografias.destroy', $monografia) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button
@@ -81,15 +81,15 @@
                 <div class="border border-gray-200 shadow">
                     <div class="bg-green-100 rounded-lg p-4 mt-4 mb-4 text-sm text-green-700 w-96 text-center"
                         role="alert">
-                        No hay álbumes.
+                        No hay monografías.
                     </div>
                 </div>
             @endif
             <div class="flex justify-center">
-                <a href="{{-- {{ route('monografias.create') }} --}}">
+                <a href="{{ route('monografias.create') }}">
                     <button
                         class="mt-5 py-1 px-4 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded text-sm text-center mr-2 mb-2">
-                        Añadir Álbum
+                        Añadir Monografía
                     </button>
                 </a>
             </div>

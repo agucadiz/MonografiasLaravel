@@ -27,7 +27,7 @@ class MonografiaController extends Controller
      */
     public function create()
     {
-        //
+        return view('monografias.create');
     }
 
     /**
@@ -38,7 +38,9 @@ class MonografiaController extends Controller
      */
     public function store(StoreMonografiaRequest $request)
     {
-        //
+        $monografia = Monografia::create($request->all());
+
+        return redirect()->route('monografias.index'); //recuerda le has quitado $monografia pq iba a index.
     }
 
     /**
@@ -83,6 +85,7 @@ class MonografiaController extends Controller
      */
     public function destroy(Monografia $monografia)
     {
-        //
+        $monografia->delete();
+        return redirect()->route('monografias.index');
     }
 }
