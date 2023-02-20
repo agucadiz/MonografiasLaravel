@@ -44,20 +44,20 @@
                                 <tr class="whitespace-nowrap">
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-gray-900">
-                                            <a href=" {{-- {{ route('monografias.show', $monografia) }} --}} ">
+                                            <a href="{{ route('monografias.show', $monografia) }}">
                                                 {{ $monografia->titulo }}
                                             </a>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-gray-900">
-                                            <a href=" {{-- {{ route('monografias.show', $monografia) }} --}} ">
+                                            <a href="{{ route('monografias.show', $monografia) }}">
                                                 {{ $monografia->anyo }}
                                             </a>
                                         </div>
                                     </td>
                                     <td class="px-6 py-4 inline-flex">
-                                        <form action=" {{-- {{ route('monografias.edit', $monografia) }} --}} " method="GET">
+                                        <form action="{{ route('monografias.edit', $monografia) }}" method="GET">
                                             <button
                                                 class="py-1 px-4 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded text-sm text-center mr-2 mb-2">
                                                 Editar

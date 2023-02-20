@@ -40,7 +40,7 @@ class MonografiaController extends Controller
     {
         $monografia = Monografia::create($request->all());
 
-        return redirect()->route('monografias.index'); //recuerda le has quitado $monografia pq iba a index.
+        return redirect()->route('monografias.show', compact('monografia'));
     }
 
     /**
@@ -51,7 +51,7 @@ class MonografiaController extends Controller
      */
     public function show(Monografia $monografia)
     {
-        //
+        return view('monografias.show', compact('monografia'));
     }
 
     /**
@@ -62,7 +62,7 @@ class MonografiaController extends Controller
      */
     public function edit(Monografia $monografia)
     {
-        //
+        return view('monografias.edit', compact('monografia'));
     }
 
     /**
@@ -74,7 +74,9 @@ class MonografiaController extends Controller
      */
     public function update(UpdateMonografiaRequest $request, Monografia $monografia)
     {
-        //
+        $monografia->update($request->all());
+
+        return redirect()->route('monografias.show', compact('monografia'));
     }
 
     /**
