@@ -29,6 +29,8 @@ Route::middleware('auth')->group(function () {
 });
 
 //CRUD
-Route::resource('monografias', MonografiaController::class)->names('monografias');
+Route::resource('monografias', MonografiaController::class)
+->names('monografias')
+->middleware(['auth', 'can:solo-admin']);
 
 require __DIR__.'/auth.php';
